@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/companyIconDetail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:id="@+id/jobTitleDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/companyNameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/salaryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/locationDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/experienceDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/datePublishedDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:textSize="18sp" />
+</LinearLayout>

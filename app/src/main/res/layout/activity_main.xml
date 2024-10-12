@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:drawableStart="@drawable/baseline_search_24"
+        android:drawablePadding="8dp"
+        android:hint="Поиск по подходящим вакансиям"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#1b1b1b"
+        android:textColorHint="#B0B0B0"
+        app:layout_constraintEnd_toStartOf="@id/filterButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/filterButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:contentDescription="Фильтр"
+        android:padding="8dp"
+        android:src="@drawable/tuneicon"
+        app:layout_constraintBottom_toBottomOf="@id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_above="@id/bottomNavigationView"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#191919"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="#a9a9a9"
+        app:itemIconTint="#a9a9a9"
+        app:menu="@menu/bottom_nav_menu" />
+    <TextView
+        android:id="@+id/noResultsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unfortunately, there are no such vacancies"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
