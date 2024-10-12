@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: JobAdapter
     private lateinit var vacancyList: List<JobModel>
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint(      "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

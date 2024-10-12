@@ -24,10 +24,10 @@ class JobAdapter(private var vacancyList: List<JobModel>) :
         val experience: TextView = itemView.findViewById(R.id.experience)
         val publishedData: TextView = itemView.findViewById(R.id.datePublished)
         val companyIcon: ImageView = itemView.findViewById(R.id.companyIcon)
-        val cardView: CardView = itemView.findViewById(R.id.cardView) // Определите cardView
+        val cardView: CardView = itemView.findViewById(R.id.cardView)
     }
 
-    // Создание ViewHolder
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JobViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.items, parent, false)
         return JobViewHolder(itemView)
@@ -47,7 +47,7 @@ class JobAdapter(private var vacancyList: List<JobModel>) :
             val context = holder.itemView.context
             val intent = Intent(context, JobDetailActivity::class.java)
 
-            // Передача данных о вакансии в JobDetailActivity
+
             intent.putExtra("title", currentJob.title)
             intent.putExtra("company", currentJob.company)
             intent.putExtra("salary", currentJob.salary)
