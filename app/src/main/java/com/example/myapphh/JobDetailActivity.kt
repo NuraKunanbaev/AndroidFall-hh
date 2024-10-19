@@ -20,6 +20,7 @@ class JobDetailActivity : AppCompatActivity() {
         val experience: TextView = findViewById(R.id.experienceDetail)
         val publishedData: TextView = findViewById(R.id.datePublishedDetail)
         val companyIcon: ImageView = findViewById(R.id.companyIconDetail)
+        val description: TextView = findViewById(R.id.descriptionDetail)
 
 
         val title = intent.getStringExtra("title")
@@ -29,6 +30,7 @@ class JobDetailActivity : AppCompatActivity() {
         val experienceText = intent.getStringExtra("experience")
         val publishedDataText = intent.getStringExtra("publishedData")
         val iconResId = intent.getIntExtra("iconResId", 0)
+        val jobDescription = intent.getStringExtra("description")
 
 
         jobTitle.text = title
@@ -38,6 +40,7 @@ class JobDetailActivity : AppCompatActivity() {
         experience.text = experienceText
         publishedData.text = publishedDataText
         companyIcon.setImageResource(iconResId)
+        description.text = jobDescription
 
         backButton.setOnClickListener {
             finish()

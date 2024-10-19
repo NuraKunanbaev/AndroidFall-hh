@@ -7,5 +7,6 @@ class JobModel(
     val location: String,
     val experience: String,
     val publishedData: String,
-    val iconResId: Int
+    val iconResId: Int,
+    val description: String
 )
